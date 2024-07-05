@@ -20,7 +20,7 @@ class FrontController extends Controller
     }
 
     public function details(Course $course)
-    {
+    {   
         return view('front.details', compact('course'));
     }
 
@@ -84,6 +84,6 @@ class FrontController extends Controller
     {
         $courses = $category->courses()->get();
 
-        return view('front.category', compact('courses'));
+        return view('front.category', compact('courses', 'category'));
     }
 }
